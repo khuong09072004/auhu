@@ -6,24 +6,28 @@ public class bai4 {
 	 public static void main(String[] args) {
 	        Scanner sc= new Scanner(System.in);
 	        System.out.print("Nhập xâu: ");
-	        String s= sc.nextLine();
-	        boolean[] f=new boolean[30];
+	        String s= sc.nextLine().toLowerCase();
+	        boolean[] f=new boolean[200];
 	        char[] c= s.toCharArray();
-	        for(int i=1;i<=26;i++) {
-	            f[i]=false;
-	        }
-	        for(int i=0;i<s.length();i++) {
-	            int x=(int) c[i];
-	            if (x >= 65 && x <= 90) {f[x-64]=true;}
-	            else if (x >= 97 && x <= 122) {
-	                f[x-96] =true;
-	            }
-	        }
-	        boolean ans=true;
-	        for(int i=1;i<=26;i++) {
-	            if(f[i]==false) ans=false;
-	        }
-	        if(ans) System.out.println("YES");
-	        else System.out.println("NO");
+	        for(int i=0;i<=25;i++) 
+            f[i]=false;
+        
+	        for(int i = 0;i < s.length();i++) 
+	        	f[122 - (int)c[i]] = true;
+	        
+	        
+	        boolean kq = true;
+	        for(int i = 0;i <= 25;i++)
+	        	if(f[i] == false) {
+	        		kq = false;
+	        		break;
+	        	}
+	        		
+	        if(kq)
+	        System.out.println("YES");
+	        else 
+	        	System.out.println("NO");
+
+	        
 	    }
 	}
