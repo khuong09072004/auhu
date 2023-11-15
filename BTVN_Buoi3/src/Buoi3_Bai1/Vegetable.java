@@ -18,7 +18,7 @@ public class Vegetable {
 	
 
 	public Vegetable(String id, String name, String unit, int quantitySold, int sale, double price) {
-		super();
+	
 		this.id = id;
 		this.name = name;
 		this.unit = unit;
