@@ -118,6 +118,17 @@ public  void nhap() {
 	setTongTien(tongTien);
 			
 }
+public void sapxep() {
+	for(int i=0;i< hang.size()-1;i++) {
+		for(int j=i+1;j<hang.size();j++) {
+			if(hang.get(i).getDonGia()<hang.get(j).getDonGia()) {
+				Hang tmp =hang.get(i);
+				hang.set(i, hang.get(j));
+				hang.set(j, tmp);
+			}
+		}
+	}
+}
 
 public void xuat() {
 	 System.out.println("------------------------------------------------------------------------------------------------------------------------");
@@ -134,7 +145,7 @@ public void xuat() {
     	 System.out.printf("%-5d%-20s%-20s%-20s%-20d%-20f%-20f%n",(i+1),getHang().get(i).getMaHang(),getHang().get(i).getTenHang(),getHang().get(i).getDonViTinh(),getHang().get(i).getSoLuong(),getHang().get(i).getDonGia(),getHang().get(i).ThanhTien());
      }
      System.out.println("------------------------------------------------------------------------------------------------------------------------");
-     System.out.println("Tong tien thanh Toan: "+ getTongTien());
+     System.out.println("Tong tien thanh Toan:      "+ getTongTien());
      System.out.printf("%-20s%-100s%n","ten nguoi mua hang","ten nguoi ban");
      System.out.printf("%-20s%-100s%n",nguoiMua.getTenNguoiMua(), nguoiBan.getTen());
      
@@ -142,8 +153,5 @@ public void xuat() {
      
 }
 
-public static void main(String[] args) {
-	
-}
 
 }
