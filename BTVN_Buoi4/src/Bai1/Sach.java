@@ -3,7 +3,7 @@ package Bai1;
 import java.util.Scanner;
 
 public class Sach {
-	static int count =0;
+	static int count =1;
 	private int id;
 	private String tenSach;
 	private int namXuatBan;
