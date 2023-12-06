@@ -10,7 +10,7 @@ public class StudentServiceImpl implements StudentService{
 	
 
 	@Override
-	public void addStudent(Student t) {
+	public void addStudent() {
 		Student t1= new Student();
 		t1.input();
 		list.add(t1);
@@ -18,9 +18,9 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	@Override
-	public void deleteStudent(int id) {
+	public void deleteStudent() {
 		System.out.print("nhap id can xoa la:");
-		id=sc.nextInt();
+		int id=sc.nextInt();
 		for (Student student : list) {
 			if(student.getId()==id) {
 				list.remove(id);
@@ -32,9 +32,9 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	@Override
-	public void searchStudent(String name) {
+	public void searchStudent() {
 		System.out.print("nhap ten sinh vien can tim kiem:");
-		 name = sc.nextLine();
+		 String name = sc.nextLine();
 		for (Student student : list) {
 			if(student.getName().equals(name))
 				System.out.println(student.toString());

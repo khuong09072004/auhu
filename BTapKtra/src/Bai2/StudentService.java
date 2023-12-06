@@ -1,9 +1,9 @@
 package Bai2;
 
 public interface StudentService {
-	public void addStudent(Student t);
-	public void deleteStudent(int id);
-	public void searchStudent(String name);
+	public void addStudent();
+	public void deleteStudent();
+	public void searchStudent();
 	public void sortStudent();
 	public void showAllStudent();
 

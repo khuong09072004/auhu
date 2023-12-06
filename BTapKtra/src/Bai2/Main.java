@@ -6,7 +6,8 @@ import java.util.Scanner;
  
 
 public class Main {
-	static 
+	
+	private static final Student Student = null;
 	static StudentServiceImpl std = new StudentServiceImpl();
 
 
@@ -29,7 +30,17 @@ public class Main {
 			menu();
 			System.out.print("nhap lua chon cua ban:");
 			choose=sc.nextInt();
-			if(choose==1) {
+			if(choose==1) 
+				std.addStudent();
+			if(choose==2)
+				std.deleteStudent();
+			if(choose==3)
+				std.searchStudent();
+			if(choose==4)
+				std.sortStudent();
+			if(choose==5)
+				std.showAllStudent();
+			if(choose==6) {
 				
 			}
 				
